@@ -1,0 +1,130 @@
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiar la tipografía a Roboto */
+    background-color: #ffffff; /* Color de fondo de la página */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Permite al footer estar al final */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+/* Estilos de la cabecera */
+header {
+    background-color: #00bcd4; /* Color de fondo de la cabecera */
+    padding: 5px;
+}
+
+
+
+
+/* Estilo para el logo */
+.logo {
+    height: 40px; /* Asegúrate que el tamaño sea igual al del icono de login */
+    width: 40px; /* Mantiene la proporción para que sea circular */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    margin-right: 15px; /* Espacio entre el logo y la navegación */
+    vertical-align: middle; /* Alinea verticalmente el logo */
+}
+
+/* Estilo del ícono de inicio de sesión */
+nav ul li.login-icon a {
+    display: inline-block; /* Permite usar padding y line-height */
+    padding: 5px 0; /* Espaciado superior e inferior igual */
+    vertical-align: middle; /* Alinea verticalmente el ícono */
+}
+
+
+
+
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo del ícono de inicio de sesión */
+nav ul li.login-icon {
+    float: right; /* Mueve el ícono a la derecha */
+    margin-right: 20px; /* Espaciado a la derecha */
+}
+
+nav ul li.login-icon a {
+    display: inline-block; /* Permite usar padding y line-height */
+    padding: 5px 0; /* Espaciado superior e inferior igual */
+}
+
+nav ul li.login-icon i {
+    font-size: 30px; /* Aumenta el tamaño del ícono */
+    color: white; /* Color del ícono */
+    line-height: 1; /* Asegura que no haya espacio extra alrededor */
+}
+
+
+
+
+
+
+
+/* Estilos para las imágenes y texto al lado */
+.valores-container {
+    display: flex; /* Usar Flexbox para alinear imágenes y texto horizontalmente */
+    align-items: flex-start; /* Alinear al inicio (parte superior) */
+    margin: 20px; /* Espacio alrededor del contenedor */
+}
+
+/* Estilos para las imágenes */
+.imagenes-texto .valor {
+    margin: 0; /* Eliminado el margen para que las imágenes queden juntas */
+}
+
+.valor img {
+    width: 400px; /* Establecer un ancho fijo para las imágenes */
+    height: 200px; /* Establecer un alto fijo para las imágenes */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para la sección de texto */
+.texto {
+    margin-left: 200px; /* Reducir margen izquierdo para centrar mejor */
+    margin-right: 100px; /* Agregar margen derecho para balancear */
+    margin-top: 150px; /* Mantener margen superior para bajar el texto */
+    max-width: 600px; /* Aumentar el ancho máximo del contenedor de texto */
+    font-size: 20px; /* Aumentar el tamaño de la fuente */
+    line-height: 1.5; /* Aumentar el espacio entre líneas */
+    text-align: justify; /* Justificar el texto para que se vea más uniforme */
+}
+
+/* Título principal */
+h1 {
+    text-align: center; /* Alinear el título al centro */
+    margin-left: 20px; /* Margen a la izquierda */
+    color: #00bcd4; /* Color del título */
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    background-color: #00bcd4; /* Color de fondo del pie de página */
+    color: white;
+    padding: 5px; /* Mayor padding para un mejor diseño */
+    margin-top: auto; /* Mantener el footer al final */
+    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+}

@@ -1,0 +1,139 @@
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiar la tipografía a Roboto */
+    background-color: #ffffff; /* Color de fondo de la página */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Permite al footer estar al final */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+/* Estilos de la cabecera */
+header {
+    background-color: #00bcd4; /* Color de fondo de la cabecera */
+    padding: 5px;
+}
+
+/* Estilo para el logo */
+.logo {
+    height: 40px; /* Asegúrate que el tamaño sea igual al del icono de login */
+    width: 40px; /* Mantiene la proporción para que sea circular */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    margin-right: 15px; /* Espacio entre el logo y la navegación */
+    vertical-align: middle; /* Alinea verticalmente el logo */
+}
+
+/* Estilo del ícono de inicio de sesión */
+nav ul li.login-icon a {
+    display: inline-block; /* Permite usar padding y line-height */
+    padding: 5px 0; /* Espaciado superior e inferior igual */
+    vertical-align: middle; /* Alinea verticalmente el ícono */
+}
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo del ícono de inicio de sesión */
+nav ul li.login-icon {
+    float: right; /* Mueve el ícono a la derecha */
+    margin-right: 20px; /* Espaciado a la derecha */
+}
+
+nav ul li.login-icon a {
+    display: inline-block; /* Permite usar padding y line-height */
+    padding: 5px 0; /* Espaciado superior e inferior igual */
+}
+
+nav ul li.login-icon i {
+    font-size: 30px; /* Aumenta el tamaño del ícono */
+    color: white; /* Color del ícono */
+    line-height: 1; /* Asegura que no haya espacio extra alrededor */
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    background-color: #00bcd4; /* Color de fondo del pie de página */
+    color: white;
+    padding: 5px; /* Mayor padding para un mejor diseño */
+    margin-top: auto; /* Mantener el footer al final */
+    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+}
+
+/* Estilos del contenedor del formulario */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto; /* Centrar el formulario */
+    padding: 20px;
+    border: 1px solid #00bcd4; /* Borde del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+}
+
+/* Estilos de los campos del formulario */
+input[type="text"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen superior e inferior */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.btn-submit {
+    background-color: #00bcd4; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    width: 100%; /* Ancho completo */
+    margin-bottom: 10px; /* Espacio entre botones */
+    text-align: center; /* Centra el texto en el botón */
+    display: inline-block; /* Permite aplicar padding y margin correctamente */
+}
+
+.btn-submit:hover {
+    background-color: #0097a7; /* Color del botón al pasar por encima */
+}
+
+/* Estilos para alertas de mensajes */
+.alert {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: #dff0d8; /* Verde claro */
+    color: #3c763d; /* Texto verde oscuro */
+    border: 1px solid #d6e9c6; /* Borde verde */
+}
+
+.alert.error {
+    background-color: #f2dede; /* Rojo claro */
+    color: #a94442; /* Texto rojo oscuro */
+    border: 1px solid #ebccd1; /* Borde rojo */
+}

@@ -1,0 +1,219 @@
+/* Importar la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos de la cabecera */
+header {
+    background-color: #00bcd4; /* Color de fondo de la cabecera */
+    padding: 5px;
+}
+
+
+
+
+/* Estilo para el logo */
+.logo {
+    height: 40px; /* Asegúrate que el tamaño sea igual al del icono de login */
+    width: 40px; /* Mantiene la proporción para que sea circular */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    margin-right: 15px; /* Espacio entre el logo y la navegación */
+    vertical-align: middle; /* Alinea verticalmente el logo */
+}
+
+/* Estilo del ícono de inicio de sesión */
+nav ul li.login-icon a {
+    display: inline-block; /* Permite usar padding y line-height */
+    padding: 5px 0; /* Espaciado superior e inferior igual */
+    vertical-align: middle; /* Alinea verticalmente el ícono */
+}
+
+
+
+
+
+/* Navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo del ícono de inicio de sesión */
+nav ul li.login-icon {
+    float: right; /* Mueve el ícono a la derecha */
+    margin-right: 20px; /* Espaciado a la derecha */
+}
+
+nav ul li.login-icon a {
+    display: inline-block; /* Permite usar padding y line-height */
+    padding: 5px 0; /* Espaciado superior e inferior igual */
+}
+
+nav ul li.login-icon i {
+    font-size: 30px; /* Aumenta el tamaño del ícono */
+    color: white; /* Color del ícono */
+    line-height: 1; /* Asegura que no haya espacio extra alrededor */
+}
+
+
+/* Contenedor principal que alinea el texto a la izquierda y las imágenes a la derecha */
+.contenido-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0; /* Eliminar padding general del contenido */
+    margin: 0; /* Asegurarse de que no haya espacio extra */
+}
+
+/* Estilo de la sección de texto */
+.texto {
+    flex: 1;
+    max-width: 40%; /* Ajusta el ancho del texto según sea necesario */
+    padding-left: 100px; /* Mueve el texto hacia la derecha */
+    padding-top: 200px;  /* Mueve el texto hacia abajo */
+}
+
+.texto h1 {
+    color: #00bcd4;
+    font-size: 48px; /* Incrementar el tamaño de la fuente de "ASEGURATTE" */
+    margin: 0;
+}
+
+.texto h2 {
+    color: #000000; /* Cambiar el color a negro */
+    font-size: 18px;
+    margin-top: 0px; /* Aumentar espacio entre los dos textos */
+}
+
+/* Sección de imágenes con cuadros celestes en posiciones aleatorias */
+.imagenes {
+    position: relative;
+    height: calc(100vh - 60px); /* Ajusta el contenedor para ocupar todo el alto menos el footer */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Posiciones aleatorias y tamaños diferentes para las imágenes */
+.imagen-cuadro {
+    position: absolute; /* Permite que las imágenes se coloquen de forma aleatoria */
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-cuadro:nth-child(1) {
+    top: 0px;
+    left: 700px;
+    width: 250px; /* Tamaño más grande */
+    height: 250px;
+}
+
+.imagen-cuadro:nth-child(2) {
+    top: 110px;
+    left: 450px;
+    width: 250px; /* Tamaño más pequeño */
+    height: 140px;
+}
+
+.imagen-cuadro:nth-child(3) {
+    top: 250px;
+    left: 450px;
+    width: 250px; /* Tamaño diferente */
+    height: 200px;
+}
+
+.imagen-cuadro:nth-child(4) {
+    top: 315px;
+    left: 300px;
+    width: 150px; /* Tamaño mediano */
+    height: 140px;
+}
+
+.imagen-cuadro:nth-child(5) {
+    top: 300px;
+    left: 700px;
+    width: 250px; /* Tamaño más grande */
+    height: 250px;
+}
+
+.imagen-cuadro:nth-child(6) {
+    top: 450px;
+    left: 300px;
+    width: 170px; /* Tamaño grande */
+    height: 90px;
+}
+
+.imagen-cuadro:nth-child(7) {
+    top: 450px;
+    left: 100px;
+    width: 200px; /* Tamaño grande */
+    height: 90px;
+}
+
+/* Estilo para los cuadros celestes */
+.cuadro-celeste {
+    background-color: #00bcd4; /* Color celeste */
+    position: absolute; /* Permite el posicionamiento absoluto */
+    
+}
+
+.cuadro-celeste.estandar {
+    width: 150px; /* Tamaño estándar */
+    height: 150px; /* Tamaño estándar */
+}
+
+.cuadro-celeste.grande {
+    width: 250px; /* Tamaño grande */
+    height: 150px; /* Tamaño grande */
+}
+
+
+/* Imágenes sin borde redondeado */
+.imagen-cuadro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del edificio en la esquina superior izquierda */
+.imagen-edificio {
+    position: absolute;
+    top: 10px; /* Ajusta la posición según sea necesario */
+    left: 20px; /* Pegado a la izquierda */
+    width: 150px; /* Tamaño de la imagen */
+    height: auto; /* Mantener proporción */
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    background-color: #00bcd4;
+    color: white;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
