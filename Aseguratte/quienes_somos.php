@@ -20,10 +20,10 @@
                 <a href="index.php">
                     <img src="img/logo.png" alt="Logo" class="logo">
                 </a>
-                <li class="login-icon"><a href="login.php"><i class="fas fa-user-circle"></i></a></li>
-                <li><a href="valores.php">Valores</a></li>
-                <li><a href="quienes_somos.php">Quienes somos</a></li>
+                <li><a href="quienes_somos.php">¿Quienes somos?</a></li>
                 <li><a href="seguros.php">Tipos de seguros</a></li>
+                <li><a href="valores.php">Nuestros valores</a></li>
+                <li><a href="contactanos.php">contactanos</a></li>
             </ul>
         </nav>
     </div>
@@ -56,7 +56,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Aseguratte. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

@@ -1,4 +1,18 @@
 <?php
+include 'conexion.php';
+
+// Inicializar variables para el toast
+$showToast = false;
+$toastMessage = ''; // Inicializar la variable aquí
+
+session_start(); // Iniciar sesión
+
+// Verificar si hay un mensaje en la sesión
+if (isset($_SESSION['toast'])) {
+    $showToast = true;
+    $toastMessage = htmlspecialchars($_SESSION['toast']);
+    unset($_SESSION['toast']); // Limpiar el mensaje después de mostrarlo
+}
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +24,9 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Incluir Font Awesome para los íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
 </head>
 <body>
 <header>
@@ -19,15 +36,28 @@
                 <a href="index.php">
                     <img src="img/logo.png" alt="Logo" class="logo">
                 </a>
-                <li class="login-icon"><a href="login.php"><i class="fas fa-user-circle"></i></a></li>
-                <li><a href="valores.php">Valores</a></li>
-                <li><a href="quienes_somos.php">Quienes somos</a></li>
+                <li><a href="quienes_somos.php">¿Quienes somos?</a></li>
                 <li><a href="seguros.php">Tipos de seguros</a></li>
+                <li><a href="valores.php">Nuestros valores</a></li>
+                <li><a href="contactanos.php">contactanos</a></li>
+
             </ul>
         </nav>
     </div>
 </header>
-
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="<?= $showToast ? 'display: block;' : 'display: none;' ?>">
+            <div class="toast-header">
+                <strong class="me-auto">Notificación</strong>
+                <small><?= date('h:i A'); ?></small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <?= $toastMessage; ?>
+            </div>
+        </div>
+    </div>
+</div>
     <main>
         <section class="contenido-principal">
             <div class="texto">
@@ -69,7 +99,18 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Aseguratte. Todos los derechos reservados.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Mostrar el toast si está configurado
+        $(document).ready(function() {
+            <?php if ($showToast): ?>
+                var toast = new bootstrap.Toast($('#liveToast'));
+                toast.show();
+            <?php endif; ?>
+        });
+    </script>
 </body>
 </html>

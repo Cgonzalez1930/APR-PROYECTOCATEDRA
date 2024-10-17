@@ -1,6 +1,6 @@
 <?php
 // Aqui configuramos la base de datos
-$host = "127.0.0.1";
+$host = "localhost";
 $dbname = "aseguratte_client";
 $username = "root"; 
 $password = ""; 
